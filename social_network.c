@@ -89,20 +89,7 @@ void displayList()
     }
 }
 
-void displayList() {
-    int i;
-    struct Node *temp;
-    printf("\nADJACENCY LIST\n\n");
-    for (i = 0; i < MAX; i++) {
-        printf("%c -> ", vertices[i]);
-        temp = list[i];
-        while (temp != NULL) {
-            printf("%c ", vertices[temp->vertex]);
-            temp = temp->next;
-        }
-        printf("-> NULL\n");
-    }
-}
+
 
 void BFSMatrix(int start) {
     int queue[MAX], visited[MAX] = {0};
