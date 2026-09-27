@@ -66,15 +66,26 @@ void addEdge(int u, int v)
     }
 }
 
-void displayMatrix() {
-    int i, j;
-    printf("\nADJACENCY MATRIX\n\n   ");
-    for (i = 0; i < MAX; i++) printf("%c ", vertices[i]);
-    printf("\n");
-    for (i = 0; i < MAX; i++) {
-        printf("%c  ", vertices[i]);
-        for (j = 0; j < MAX; j++) printf("%d ", matrix[i][j]);
-        printf("\n");
+void displayList()
+{
+    int i;
+    struct Node *temp;
+
+    printf("\nADJACENCY LIST\n\n");
+
+    for (i = 0; i < MAX; i++)
+    {
+        printf("%c -> ", vertices[i]);
+
+        temp = list[i];
+
+        while (temp != NULL)
+        {
+            printf("%c -> ", vertices[temp->vertex]);
+            temp = temp->next;
+        }
+
+        printf("NULL\n");
     }
 }
 
