@@ -90,7 +90,6 @@ void displayList()
 }
 
 
-
 void BFSMatrix(int start) {
     int queue[MAX], visited[MAX] = {0};
     int front = 0, rear = 0, current, i, operations = 0;
