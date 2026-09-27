@@ -28,14 +28,42 @@ struct Node* createNode(int v) {
     return newNode;
 }
 
-void addEdge(int u, int v) {
-    struct Node *newNode = createNode(v);
-    newNode->next = list[u];
-    list[u] = newNode;
+void addEdge(int u, int v)
+{
+    struct Node *newNode;
+    struct Node *temp;
+
+    newNode = createNode(v);
+
+    if (list[u] == NULL)
+    {
+        list[u] = newNode;
+    }
+    else
+    {
+        temp = list[u];
+
+        while (temp->next != NULL)
+            temp = temp->next;
+
+        temp->next = newNode;
+    }
 
     newNode = createNode(u);
-    newNode->next = list[v];
-    list[v] = newNode;
+
+    if (list[v] == NULL)
+    {
+        list[v] = newNode;
+    }
+    else
+    {
+        temp = list[v];
+
+        while (temp->next != NULL)
+            temp = temp->next;
+
+        temp->next = newNode;
+    }
 }
 
 void displayMatrix() {
