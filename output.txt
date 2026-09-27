@@ -1,0 +1,47 @@
+SOCIAL NETWORK GRAPH
+====================
+
+Connections:
+A-B  A-C  B-D  B-E  C-F  E-F
+
+ADJACENCY MATRIX
+
+   A B C D E F
+A  0 1 1 0 0 0
+B  1 0 0 1 1 0
+C  1 0 0 0 0 1
+D  0 1 0 0 0 0
+E  0 1 0 0 0 1
+F  0 0 1 0 1 0
+
+ADJACENCY LIST
+
+A -> B -> C -> NULL
+B -> A -> D -> E -> NULL
+C -> A -> F -> NULL
+D -> B -> NULL
+E -> B -> F -> NULL
+F -> C -> E -> NULL
+
+BFS using Adjacency Matrix: A B C D E F
+BFS operations = 36
+
+BFS using Adjacency List: A B C D E F
+BFS operations = 12
+
+DFS using Adjacency Matrix: A B D E F C
+DFS operations = 36
+
+DFS using Adjacency List: A B D E F C
+DFS operations = 12
+
+VERTEX SEARCH
+-------------
+Vertex E found after 5 comparisons
+
+EDGE CHECKING
+-------------
+Matrix: E-F exists
+Edge check operations = 1
+List: E-F exists
+Edge check operations = 2

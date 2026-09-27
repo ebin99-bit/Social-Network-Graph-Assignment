@@ -1,0 +1,11 @@
+Vertices: A B C D E F
+Connections:
+A-B
+A-C
+B-D
+B-E
+C-F
+E-F
+Starting vertex for BFS/DFS: A
+Vertex to search: E
+Edge to check: E-F
